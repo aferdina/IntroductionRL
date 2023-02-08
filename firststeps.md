@@ -54,6 +54,16 @@ Install Homebrew, a package manager for macOS, by running
 
 in your terminal.
 
+Follow the instructions in the terminal to add Homebrew to your `PATH`:
+
+```sh
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >>/Users/YOURUSER/.zprofile
+echo 'eval "$(opt//homebrew/bin/brew shellenv)"' >>/Users/YOURUSER/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Replace `YOURUSER` by the username of your system.
+
 Use Homebrew to install pyenv by running
 
 ```sh
@@ -69,7 +79,19 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 ```
 
-Restart your terminal or run ```source ~/.bash_profile``` t
+If you do not have a .zshrc file, then you must first create one with the following command.
+
+```sh
+touch ~/.zshrc
+```
+
+You can then open this with the following command.
+
+```sh
+open ~/.zshrc
+```
+
+Restart your terminal or run ```source ~/.zshrc``` t
 o reload the shell profile
 
 Verify the installation by running ```pyenv --version``` which should show the version of pyenv you have installed.
@@ -177,19 +199,28 @@ Here are the steps from the video:
 1. Create a virtual environment:
 
     ```sh
-        python -m venv .venv
+    python -m venv .venv
     ```
 
-2. Install all requiered packages:
+2. Activate your virtual environment:
 
     ```sh
-        pip install gym
-        pip install pygame
+    source .venv/bin/activate
     ```
 
-3. Copy the following code to the python file:
+3. Install all requiered packages:
+
+    ```sh
+    pip install gym
+    pip install pygame
+    ```
+
+4. Copy the following code to a python file:
 
 ```python
+""" play the cart pole game
+"""
+
 import gym
 
 # choose the gym environment you want to run
@@ -205,7 +236,7 @@ while True:
         action = env.action_space.sample()
         observation, reward, terminated, truncuated, info = env.step(action)
         if terminated or truncuated:
-            print("Game finished after {} steps".format(_ + 1))
+            print(f"Game finished after {_ +1} steps.")
             break
     play_again = input("Do you want to play again? (yes/no): ")
     if play_again.lower() != "yes":
