@@ -91,8 +91,7 @@ You can then open this with the following command.
 open ~/.zshrc
 ```
 
-Restart your terminal or run ```source ~/.zshrc``` t
-o reload the shell profile
+Restart your terminal or run ```source ~/.zshrc``` to reload the shell profile
 
 Verify the installation by running ```pyenv --version``` which should show the version of pyenv you have installed.
 
@@ -110,19 +109,19 @@ Next, we want to install a version of Python to run our first Python script. For
 1. Install Python 3.10 using pyenv:
 
     ```sh
-        pyenv install 3.10.0
+    pyenv install 3.10.0
     ```
 
 2. Set Python 3.10 as the global version:
 
     ```python
-        pyenv global 3.10.0
+    pyenv global 3.10.0
     ```
 
 3. Verify that Python 3.10 is set as the global version by running:
 
     ```sh
-        pyenv version
+    pyenv version
     ```
 
 Note: If the python version you want to install is not available in pyenv, you can also build it from source using
