@@ -28,10 +28,10 @@ Open a terminal window on your Mac.
 Use the command
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+brew install poetry
 ```
 
-to download and run the poetry installer.
+to download and run the poetry.
 
 Once the installation is complete, you can use the command
 
