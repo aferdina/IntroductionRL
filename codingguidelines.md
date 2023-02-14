@@ -60,8 +60,8 @@ command to manage your Python projects, create virtual environments, and manage 
 For convienience, change the following settings in poetry:
 
 ```sh
-poetry config virtualenvs.in-project = true
-virtualenvs.prefer-active-python = true
+poetry config virtualenvs.in-project true
+poetry config virtualenvs.prefer-active-python true
 ```
 
 ***
@@ -223,6 +223,18 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 This will create a new SSH key pair, with the public key stored in ```~/.ssh/id_rsa.pub``` and the private key stored in ```~/.ssh/id_rsa```.
+
+Initialize a ssh-agent by using
+
+```sh
+eval "$(ssh-agent -s)"
+```
+
+and add to key to the agent:
+
+```sh
+ssh-add ~/.ssh/id_rsa
+````
 
 Add your new SSH key to your GitHub account:Go to your GitHub account settings and select "SSH and GPG keys".Click on "New SSH key" and give it a title, like "macOS"Copy the contents of your public key file (```~/.ssh/id_rsa.pub```) and paste it into the "Key" field on GitHub.Click on "Add SSH key" to save the key.
 
