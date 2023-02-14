@@ -47,19 +47,7 @@ to check that poetry has been correctly installed.
 brew install pyenv-virtualenv
 ```
 
-(optional) To use poetry with pyenv, you need to set the path of poetry to pyenv. You can do this by using the command
-
-```sh
-echo 'eval "$(pyenv init -)"' > ~/.bash_profile
-```
-
-or
-
-```sh
-echo 'eval "$(pyenv init -)"' > ~/.zshrc
-```
-
-depending on your shell.
+(optional) To use poetry with pyenv, you need to set the path of poetry to pyenv. You can do this by adding `eval "$(pyenv init -)"` and `export PATH="$HOME/.poetry/bin:$PATH` to the `.bash_profile` or `eval "$(pyenv init -)"` to the `.zshrc` file depending on your shell.
 
 Once the installation is complete, you can use the
 
