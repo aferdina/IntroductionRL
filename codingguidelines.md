@@ -114,9 +114,14 @@ Overall, using Poetry to manage Python dependencies can help to make the process
 4. Create a file for the project, for example: ```main.py```
 
     ```python
+    """ get all infos from cpython package
+    """
     import requests
 
     def main():
+        """
+        print response
+        """
         response = requests.get("https://api.github.com/repos/python/cpython")
         print(response.json())
 
@@ -157,7 +162,7 @@ Here are the steps to follow:
 5. Publish the package to PyPI: To publish the package to PyPI, you need to create an account on the PyPI website and then run the following command:
 
     ```sh
-        poetry publish
+    poetry publish
     ```
 
 It will ask you to enter your PyPI username and password. After entering the credentials, Poetry will publish the distribution package to PyPI.
