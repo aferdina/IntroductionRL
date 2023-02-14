@@ -41,20 +41,6 @@ poetry --version
 
 to check that poetry has been correctly installed.
 
-You can also add poetry to your shell profile. You can do this by using the command
-
-```sh
-poetry completions bash &gt; $(brew --prefix)/etc/bash_completion.d/poetry.bash-completion
-```
-
-if you use bash or
-
-```sh
-poetry completions zsh &gt; "$(brew --prefix)/share/zsh/site-functions/_poetry"
-```
-
-if you use zsh.
-
 (optional) To use poetry virtual environment, you need to install pyenv-virtualenv. You can do this by using the command
 
 ```sh
@@ -64,13 +50,13 @@ brew install pyenv-virtualenv
 (optional) To use poetry with pyenv, you need to set the path of poetry to pyenv. You can do this by using the command
 
 ```sh
-echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bash_profile
+echo 'eval "$(pyenv init -)"' > ~/.bash_profile
 ```
 
 or
 
 ```sh
-echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.zshrc
+echo 'eval "$(pyenv init -)"' > ~/.zshrc
 ```
 
 depending on your shell.
@@ -82,6 +68,14 @@ poetry
 ```
 
 command to manage your Python projects, create virtual environments, and manage dependencies.
+
+For convienience, change the following settings in poetry:
+
+```sh
+poetry config virtualenvs.in-project = true
+virtualenvs.prefer-active-python = true
+```
+
 ***
 **Andre**: Why should we use poetry to manage Python dependencies?
 
