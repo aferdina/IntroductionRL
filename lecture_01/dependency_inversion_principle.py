@@ -2,6 +2,7 @@
 """
 from abc import ABC, abstractmethod
 
+# pylint: disable=too-few-public-methods
 # Main Idea of principle: Abstractions should not depend upon details.
 # Details should depend upon abstractions.
 
@@ -70,20 +71,32 @@ class DIPDataSource(ABC):
 
 
 class DIPFrontEnd:
+    """class to define the frontend of the app"""
+
     def __init__(self, data_source: DIPDataSource):
         self.data_source = data_source
 
-    def display_data(self):
+    def display_data(self) -> None:
+        """print data from the data source"""
         data = self.data_source.get_data()
         print("Display data:", data)
 
 
 class Database(DIPDataSource):
-    def get_data(self):
+    """class to define the database"""
+
+    def get_data(self) -> str:
+        """get data from the database
+
+        Returns:
+            str: returned data
+        """
         return "Data from the database"
 
 
 class API(DIPDataSource):
+    """class to define the API"""
+
     def get_data(self):
         return "Data from the API"
 

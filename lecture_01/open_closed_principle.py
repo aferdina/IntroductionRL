@@ -78,7 +78,7 @@ class Rectangle(Shape):
 # By using inheritance and an abstract base class, the existing code can be
 # extended to support new shapes without having to modify the existing code.
 # For example, if we wanted to add a square shape, we could simply
-# create a Square class that inherits from Shapeand provide an implementation of the area method.
+# create a Square class that inherits from Shape and provide an implementation of the area method.
 # This adheres to the Open/Closed Principle as the existing code
 # remains closed for modification, while new functionality can be added through extension.
 
