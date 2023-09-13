@@ -33,6 +33,7 @@ def calculate_area(shapes: List[Shape]) -> float:
 # The calculate_area function takes a list of shapes and
 # calculates the total area by calling the area method on each shape.
 
+
 class Circle(Shape):
     """Class to define a circle"""
 
@@ -78,9 +79,11 @@ class Rectangle(Shape):
 # By using inheritance and an abstract base class, the existing code can be
 # extended to support new shapes without having to modify the existing code.
 # For example, if we wanted to add a square shape, we could simply
-# create a Square class that inherits from Shape and provide an implementation of the area method.
+# create a Square class that inherits from Shape and provide an implementation
+# of the area method.
 # This adheres to the Open/Closed Principle as the existing code
-# remains closed for modification, while new functionality can be added through extension.
+# remains closed for modification, while new functionality
+# can be added through extension.
 
 if __name__ == "__main__":
     used_shapes = [Circle(2), Rectangle(2, 4), Circle(4), Rectangle(4, 8)]

@@ -1,7 +1,8 @@
 """Single Responsibility Principle"""
 
 ## Suppose you're working on a simple blogging system.
-## You might have a class BlogPost that handles both the creation and the formatting of blog posts:
+## You might have a class BlogPost that handles both the creation and the formatting of
+## blog posts:
 
 
 class BlogPost:
@@ -18,8 +19,10 @@ class BlogPost:
         pass
 
 
-# In this example, the BlogPost class has two responsibilities: creating a blog post and formatting a blog post.
-# This violates the Single Responsibility Principle because a change in formatting requirements could affect the creation logic, and vice versa.
+# In this example, the BlogPost class has two responsibilities: creating a blog post and
+# formatting a blog post.
+# This violates the Single Responsibility Principle because a change in formatting
+# requirements could affect the creation logic, and vice versa.
 # To adhere to the SRP, you could split the responsibilities into two separate classes:
 
 
@@ -42,8 +45,11 @@ class BlogPostFormatter:
         pass
 
 
-# Now, the BlogPostCreator class is responsible only for creating posts, and the BlogPostFormatter class is responsible for formatting posts.
+# Now, the BlogPostCreator class is responsible only for creating posts, and the
+# BlogPostFormatter class is responsible for formatting posts.
 # This separation makes the code more modular and easier to maintain.
-# If there are changes in formatting requirements, they won't affect the creation logic, and vice versa.
+# If there are changes in formatting requirements, they won't affect the creation logic,
+# and vice versa.
 
-# By adhering to the Single Responsibility Principle, you ensure that each class has a single reason to change, making your codebase more maintainable and flexible.
+# By adhering to the Single Responsibility Principle, you ensure that each class has a
+# single reason to change, making your codebase more maintainable and flexible.

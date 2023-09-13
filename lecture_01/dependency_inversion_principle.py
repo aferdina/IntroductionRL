@@ -10,7 +10,8 @@ from abc import ABC, abstractmethod
 # That sounds pretty complex. Here’s an example that will help to clarify it.
 # Say you’re building an application and have a FrontEnd class to display
 # data to the users in a friendly way.
-# The app currently gets its data from a database, so you end up with the following code:
+# The app currently gets its data from a database,
+# so you end up with the following code:
 
 
 class BackEnd:
@@ -47,7 +48,8 @@ class FrontEnd:
 # This coupling can lead to scalability issues. For example, say that your app is
 # growing fast, and you want the app to be able to read data from a REST API.
 # How would you do that?
-# You may think of adding a new method to BackEnd to retrieve the data from the REST API.
+# You may think of adding a new method to BackEnd to retrieve the data
+# from the REST API.
 # However, that will also require you to modify FrontEnd, which should be closed to
 # modification, according to the open-closed principle.
 # To fix the issue, you can apply the dependency inversion principle and make your
@@ -111,7 +113,8 @@ class API(DIPDataSource):
 # Finally, you define the API class to support retrieving the data from the REST API.
 # This class also depends on the DataSource abstraction.
 
-# Now, you can use the FrontEnd class with any class that implements the DataSource interface.
+# Now, you can use the FrontEnd class with any class that implements the
+# DataSource interface.
 # >>> from app_dip import API, Database, FrontEnd
 
 # >>> db_front_end = FrontEnd(Database())

@@ -47,8 +47,8 @@ class Square(Rectangle):
 
 
 # The method ``is_square`` takes a Rectangle object and checks if it is a square.
-# After the liskov substitution principle, we can use the ``is_square`` method with a Square object
-# and get the desired behaviour.
+# After the liskov substitution principle, we can use the ``is_square`` method with a
+# Square object and get the desired behaviour.
 
 if __name__ == "__main__":
     used_rc = Rectangle(2.0, 3.0)
